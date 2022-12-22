@@ -1,8 +1,10 @@
-import connection from 'connection.js'
 import mongoose from 'mongoose'
+//import data from './db/quoteData.json' assert{type: 'json'}
 
-let Quotes = new mongoose.Schema({
-    data: Object
-})
+let Quote = new mongoose.Schema({
+    anime: {type: String},
+    character:{type: String},
+    quote:{type: String}
+}) 
 
-export default mongoose.model('quotes',Quotes)
+export default mongoose.model('Quote', Quote)

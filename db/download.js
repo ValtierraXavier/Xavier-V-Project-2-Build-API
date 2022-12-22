@@ -6,7 +6,7 @@ import {promises as fsPromises} from 'fs'
 async function getRandomQuote(){
 fetch("https://animechan.vercel.app/api/random")
           .then((response) => response.json())
-          .then((quote) => fsPromises.writeFile('quoteData.json',JSON.stringify(quote)))
+          .then((quote) => fsPromises.writeFile('./db/quoteData.json',JSON.stringify(quote)))
           //.then((res) => console.log(res))
           .catch(error =>(console.log('Error:', error)))
 }
@@ -14,10 +14,11 @@ fetch("https://animechan.vercel.app/api/random")
 async function getAnimeData() {
 fetch("https://kitsu.io/api/edge/anime")
           .then((response) => response.json())
-          .then((quote) => fsPromises.writeFile('animeData.json',JSON.stringify(quote)))
+          .then((data) => fsPromises.writeFile('./db/animeData.json',JSON.stringify(data)))
           //.then((res) => console.log(res))
           .catch(error =>(console.log('Error:')))
 }
 
 getAnimeData();
 getRandomQuote();
+
