@@ -1,22 +1,29 @@
 import db from'./db/connection.js'
 import connection from './db/connection.js'
 import express from 'express'
-import quote from './models/Quote.js' //assert{type: 'json'}
-import { Script } from 'vm';
+import quote from './Models/Quote.js' //assert{type: 'json'} 
+import info from './Models/Info.js'
 
-let app = express();
-Port = 3000 || process.env.PORT;
+let app = express(); 
 
-app.listen(PORT, () =>
-console.log('Listening on port: ',PORT)
+let Port = 3000 || process.env.PORT;
+
+app.listen(Port, () =>
+console.log('Listening on port: ', Port)
 )
 
 app.get('/quote', (req, res) =>{
     quote.find({})
    .then(said => {
     res.json(said)
-    Script(npm.run.start)
    })
 }
 )
-    
+app.get('/info', (req, res)=>{
+info.find({})
+.then(inpho => {
+    res.json(inpho)
+})
+})   
+
+

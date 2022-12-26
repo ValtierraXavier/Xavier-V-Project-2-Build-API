@@ -9,7 +9,7 @@ mongoose.set('strictQuery', true)
 
 //mongoose.connect('mongodb://127.0.0.1:27017/Quote', connectConfig)
 
-const url = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/example'
+const url = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/Project2'
 
 mongoose.connect(url, connectConfig)
 

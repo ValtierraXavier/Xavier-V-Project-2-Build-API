@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./db/download.js && railway run node ./seed/quoteSeed.js"
+    "start": "node ./db/download.js && node ./seed/quoteSeed && node ./seed/infoSeed "
   },
   "repository": {
     "type": "git",
