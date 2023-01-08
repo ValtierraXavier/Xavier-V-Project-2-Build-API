@@ -16,8 +16,8 @@ app.use('/', routes);
 
 db.on('connected', () => {
 console.clear()
-console.log(chalk.blue('connected'))
+console.log(chalk.greenBright.bold('Connected!'))
 app.listen(PORT, () =>{
-    console.log('Express Running')
+    console.log(chalk.bgGreen.bold('Express is Running'))
 })
 })

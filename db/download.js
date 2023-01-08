@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 import {promises as fsPromises} from 'fs'
-let whatAnime = "bleach"
+export let whatAnime = "gundam"
 
 //Below is done STOP TOUCHING IT!
 export async function getRandomQuote(){
@@ -24,4 +24,3 @@ fetch(`https://kitsu.io/api/edge//anime?filter%5Btext%5D=${whatAnime}`)
 getAnimeData();
 getRandomQuote();
 
-export default fsPromises

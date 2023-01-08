@@ -4,7 +4,7 @@ import animeData from '../Models/Info.js'
 import mongoose from 'mongoose'
 
 try{
-    await animeData.deleteMany({})
+    //await animeData.deleteMany({})
     await animeData.create(data)
     console.log('Done!')
     mongoose.disconnect()
