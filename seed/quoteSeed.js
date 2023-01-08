@@ -5,8 +5,8 @@ import Model from '../Models/Quote.js'
 
 
 try{
-await Model.deleteMany({})
-await Model.create(data)
+await Model.insertMany(data)
+//await Model.deleteMany({})
 console.log('Done!')
 mongoose.disconnect()
 }catch(error){console.log('Error:', error)}

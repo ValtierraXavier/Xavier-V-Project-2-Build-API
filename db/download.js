@@ -1,9 +1,9 @@
 import fetch from 'node-fetch'
 import {promises as fsPromises} from 'fs'
-let whatAnime = "code geass"
+let whatAnime = "bleach"
 
 //Below is done STOP TOUCHING IT!
-async function getRandomQuote(){
+export async function getRandomQuote(){
 fetch(`https://animechan.vercel.app/api/random/anime?title=${whatAnime}`)
           .then((response) => response.json())
           .then((quote) => fsPromises.writeFile('./db/quoteData.json',JSON.stringify(quote)))
@@ -13,7 +13,7 @@ fetch(`https://animechan.vercel.app/api/random/anime?title=${whatAnime}`)
 //Above is done STOP TOUCHING IT!
 
 // console.log(whatAnime.anime)
-async function getAnimeData(){
+export async function getAnimeData(){
 fetch(`https://kitsu.io/api/edge//anime?filter%5Btext%5D=${whatAnime}`)
           .then((response) => response.json())
           .then((data) => fsPromises.writeFile('./db/animeData.json',JSON.stringify(data)))
@@ -24,4 +24,4 @@ fetch(`https://kitsu.io/api/edge//anime?filter%5Btext%5D=${whatAnime}`)
 getAnimeData();
 getRandomQuote();
 
-export default whatAnime;
+export default fsPromises
