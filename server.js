@@ -4,9 +4,10 @@ import cors from 'cors';
 import logger from 'morgan';
 import chalk from 'chalk'
 import routes from './router/index.js'
+import router from './router/dataRoutes.js';
 
 const app = express();
-const PORT =process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors());
