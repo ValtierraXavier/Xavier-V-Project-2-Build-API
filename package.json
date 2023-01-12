@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./db/download.js && node ./seed/quoteSeed && node ./seed/infoSeed "
+    "start": "node server.js",
+    "seed": "node ./db/download.js && node ./seed/quoteSeed && node ./seed/infoSeed "
   },
   "repository": {
     "type": "git",
