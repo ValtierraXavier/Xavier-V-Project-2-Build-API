@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "seed": "node ./db/download.js && node ./seed/quoteSeed && node ./seed/infoSeed "
+    "seed": "node ./db/download.js && node ./seed/quoteSeed && node ./seed/infoSeed ",
+    "down": "nodemon ./db/download",
+    "send": "nodemon ./seed/quoteSeed"
   },
   "repository": {
     "type": "git",
